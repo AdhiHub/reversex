@@ -6,7 +6,7 @@ CYAN='\033[1;36m'
 YELLOW='\033[1;33m'
 RESET='\033[0m'
 
-RESULTS_FILE="reversex_payloads.txt"
+RESULTS_FILE="reversex_payloads_$(date +%Y%m%d_%H%M%S).txt"
 
 show_banner() {
     clear 2>/dev/null || true
