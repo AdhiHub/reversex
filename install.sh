@@ -2,8 +2,8 @@
 
 RED='\033[1;31m'; GREEN='\033[1;32m'; CYAN='\033[1;36m'; YELLOW='\033[1;33m'; RESET='\033[0m'
 
-REPO_URL="https://raw.githubusercontent.com/AdhiHub/reversex/main/reversex.sh"
-TOOL_NAME="reversex"
+REPO_URL="https://raw.githubusercontent.com/AdhiHub/ShellX/main/shellx.sh"
+TOOL_NAME="shellx"
 
 detect_prefix() {
     if [ -n "$PREFIX" ] && [ -d "$PREFIX" ]; then
@@ -59,7 +59,7 @@ do_install() {
 main() {
     echo -e "${RED}"
     echo "  ╔══════════════════════════════════════╗"
-    echo "  ║     REVERSEX INSTALLER v1.1          ║"
+    echo "  ║     SHELLX INSTALLER v1.1          ║"
     echo "  ╚══════════════════════════════════════╝"
     echo -e "${RESET}"
     echo -e "${YELLOW}Use at your own risk, developer assume NO liability${RESET}"

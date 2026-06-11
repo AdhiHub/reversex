@@ -6,15 +6,21 @@ CYAN='\033[1;36m'
 YELLOW='\033[1;33m'
 RESET='\033[0m'
 
-RESULTS_FILE="reversex_payloads_$(date +%Y%m%d_%H%M%S).txt"
+RESULTS_FILE="shellx_payloads_$(date +%Y%m%d_%H%M%S).txt"
 
 show_banner() {
     clear 2>/dev/null || true
     echo -e "${RED}"
-    echo "╔══════════════════════════════════════╗"
-    echo "║        REVERSEX v1.0                 ║"
-    echo "║   Reverse Shell & Payload Generator  ║"
-    echo "╚══════════════════════════════════════╝"
+    echo "    ███████╗██╗  ██╗███████╗██╗     ██╗  ██╗"
+    echo "    ██╔════╝██║  ██║██╔════╝██║     ██║  ██║"
+    echo "    ███████╗███████║█████╗  ██║     ███████║"
+    echo "    ╚════██║██╔══██║██╔══╝  ██║     ██╔══██║"
+    echo "    ███████║██║  ██║███████╗███████╗██║  ██║"
+    echo "    ╚══════╝╚═╝  ╚═╝╚══════╝╚══════╝╚═╝  ╚═╝"
+    echo -e "${GREEN}"
+    echo "    ╔══════════════════════════════════════╗"
+    echo "    ║   Shell & Payload Generator  v1.0    ║"
+    echo "    ╚══════════════════════════════════════╝"
     echo -e "${RESET}"
 }
 
@@ -28,7 +34,7 @@ show_disclaimer() {
 
 show_help() {
     echo -e "${CYAN}USAGE:${RESET}"
-    echo "  ./reversex.sh [option] [LHOST] [LPORT]"
+    echo "  ./shellx.sh [option] [LHOST] [LPORT]"
     echo ""
     echo -e "${CYAN}OPTIONS:${RESET}"
     echo "  -bash     Generate Bash reverse shell payload"
@@ -39,8 +45,8 @@ show_help() {
     echo "  -h, --help  Show this help message"
     echo ""
     echo -e "${CYAN}EXAMPLES:${RESET}"
-    echo "  ./reversex.sh -bash 10.0.0.5 4444"
-    echo "  ./reversex.sh -all 10.0.0.5 4444"
+    echo "  ./shellx.sh -bash 10.0.0.5 4444"
+    echo "  ./shellx.sh -all 10.0.0.5 4444"
     echo ""
     show_disclaimer
 }
